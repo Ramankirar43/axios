@@ -1,0 +1,76 @@
+@import "../../vars.css";
+
+.exp {
+    position: relative;
+    border-radius: 15px;
+    padding: 50px;
+    margin-top: 40px;
+    z-index: 1;
+    margin-left: 7%;
+    margin-right: 7%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.395); /* Soft shadow for depth */
+}
+
+.title {
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    
+}
+
+.exp1 {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.475);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.exp1:hover {
+    transform: scale(1); 
+   
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0%;
+   margin-left: 20px;
+    background-color: var(--color-secondary);
+}
+
+.description {
+    flex: 1;  /* Flex-grow for better structure */
+    color: #fff;
+    margin-left: 40px;
+}
+
+.post {
+    font-size: 24px;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 5px;
+}
+
+.duration {
+    font-size: 15px;
+    color: #9E9E9E;
+    margin-bottom: 15px;
+}
+
+.detail ul {
+    list-style-type: "🔹"; /* Custom bullet point */
+    padding-left: 20px;
+}
+
+.detail li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+}

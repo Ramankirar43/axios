@@ -1,0 +1,124 @@
+.navbar {
+  position: sticky;
+  top:25px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5%;
+  margin: 0 5%;
+  border-radius: 25px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  background:  #04152dcf ;
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s ease;
+
+
+ /* Ensure background on sticky */
+}
+
+.heroImg {
+  width: 50px;
+  border-radius: 50%;
+  animation: floating 3s infinite ease-in-out;
+  filter: brightness(65%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menuItems {
+  display: flex;
+  gap: 0px;
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menuItems a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+  background: linear-gradient(160deg, #04152d, #073164, #00bcd4);
+
+}
+
+.btnn {
+  all: unset;
+  cursor: pointer;
+}
+
+/* --- Responsive Breakpoint --- */
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .menuItems {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(25, 55, 109, 0.95);
+    padding: 24px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    min-width: 200px;
+  }
+
+  .menuOpen {
+    display: flex !important;
+  }
+
+  .menuItems a {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}

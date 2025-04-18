@@ -1,0 +1,88 @@
+.section {
+    padding: 10px 5%;
+    text-align: center;
+    /* background: linear-gradient(135deg, #04152d, #0c2a4e); */
+    color: hsl(0, 0%, 100%);
+    margin: 6% 6%;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+ 
+    border-radius: 20px;
+    margin-top: 100px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    color: #a68cff;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 28px;
+  /* border:1px solid red; */
+
+  }
+  
+  .resourceButton {
+    padding: 15px 30px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298, #3b82f6, #60a5fa);
+
+margin-top: 30px;
+
+    color: white;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+  }
+  
+  .resourceButton:hover {
+    background: linear-gradient(135deg, #04152d, #0a2342, #133b5c, #1c5275, #246b95);
+
+
+
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .resourceButton {
+      font-size: 0.9rem;
+      padding: 12px 24px;
+      min-width: 120px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .resourceButton {
+      width: 100%;
+      min-width: unset;
+      font-size: 1rem;
+    }
+  
+    .buttonContainer {
+      gap: 15px;
+    }
+  
+    .title {
+      font-size: 1.75rem;
+    }
+  }
+  

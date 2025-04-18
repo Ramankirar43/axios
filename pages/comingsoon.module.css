@@ -1,0 +1,38 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f172a; /* Dark background */
+    color: #14f632; /* Light text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    border:1px solid red;
+  }
+  
+  .section div {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: 2px dashed #38bdf8; /* Light blue dashed border */
+    border-radius: 1rem;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Optional subtle animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+  }
+  

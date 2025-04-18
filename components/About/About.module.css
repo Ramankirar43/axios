@@ -1,0 +1,81 @@
+@import "../../vars.css";
+
+
+.container {
+  padding: 4rem 2rem;
+ 
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 90px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #a68cff;
+  margin-bottom: 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.text p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #f3f3fa;
+  filter: none ;
+  backdrop-filter: none ;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  background: #12122a;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Accent color variations */
+.blue h3 {
+  color: #3b82f6;
+}
+
+.purple h3 {
+  color: #a855f7;
+}
+
+.pink h3 {
+  color: #ec4899;
+}
+
+.cyan h3 {
+  color: #06b6d4;
+}

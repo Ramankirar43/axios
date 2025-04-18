@@ -1,0 +1,237 @@
+@import "../../vars.css";
+.section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    z-index: 1;
+    margin-left: 7%;
+    margin-right: 6%;
+    
+
+  }
+ 
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+  }
+.motto{
+ color: #cf19a4;
+  font-size: 40px;
+  margin-left: 160px;
+  font-weight: 700;
+ 
+}
+  .name {
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 27px;
+    font-family: var(--font-roboto);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 70%,
+      rgba(255, 255, 255, 0) 120%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+.heading {
+  
+    /* color: #343d68; */
+    line-height: 30px;
+    font-size: 70px;
+    line-height: 40px;
+    margin-top: 3.5rem;
+  }
+  
+  .role {
+    color: #4e45d5;
+    font-weight: 800;
+  }
+  
+    .desc {
+        font-size: 30px;
+        font-family: var(--font-roboto);
+        margin-bottom: 61px;
+        margin-top: 30px;
+      }
+  
+      .btn {
+        background-color: #1e41e1; /* Blue color */
+        width: fit-content;
+        color: white;
+        padding: 0.8rem 2.3rem;
+        box-shadow: 5px 5px 7px 0px #0000003f;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.5s ease; /* Smooth transition */
+        font-weight: 600;
+        border: solid 3px transparent;
+        position: relative;
+        z-index: 1;
+  
+        border-radius: 100px;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 17px 26px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+      }
+      .btn:hover {
+        border: solid 3px #b3c607;
+        color: rgb(18, 16, 16);
+        transition: all 0.5s;
+        background-color: #14b5f4; /* White background when hovered */
+      }
+      
+
+      .heroImg {
+  width: 270px;           /* or any fixed size */
+  height: 270px;          /* make sure it's equal to width */
+  border-radius: 50%;
+    /* ensures circular shape */
+  object-fit: cover;      /* crops and centers the image inside the circle */
+  z-index: 1;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+  filter: brightness(65%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+      }
+      .heroImg:hover {
+        transform: scale(1.1); /* Slight zoom effect */
+        box-shadow: 0 0 30px 10px rgba(5, 121, 222, 0.637); /* Glowing sun effect */
+        
+    }
+  /* Responsive Styles */
+
+.topBlur {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    min-width: 350px;
+    min-width: 350px;
+    top: -128px;
+    left: -10vw;
+    border-radius: 764px;
+    /* background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px); */
+    z-index: 0;
+  }  
+  .buttons {
+    margin-top: 75px;
+    display: flex;
+    gap: 50px; 
+    /* justify-content: center; */
+   
+  }
+  
+  .navButton {
+    background: linear-gradient(120deg, #1e8fffa0, #f200ff7e);
+    color: white;
+    padding: 12px 30px;
+    font-size: 23px;
+   
+    font-weight: 600;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .navButton::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 50%);
+    transform: translateX(-100%) rotate(25deg);
+    transition: transform 0.7s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .navButton:hover::before {
+    transform: translateX(100%) rotate(25deg);
+  }
+  
+  .navButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(30, 144, 255, 0.5);
+  }
+  
+  .bottomBlur {
+    position: absolute;
+    width: 70vw;
+    height: 50vw;
+    min-width: 350px;
+    min-width: 250px;
+    top: 246px;
+    right: -25vw;
+    border-radius: 764px;
+  
+   
+    z-index: 0;
+  }
+  
+  @media screen and (max-width: 830px) {
+    .section {
+      flex-direction: column-reverse; /* Change from row to column */
+      text-align: center;
+      align-items: center;
+    }
+  
+    .heroImg {
+      /* display: none; */
+      width: 70%; /* Increase size on smaller screens */
+      max-width: 250px;
+      margin-top: 60px;
+      margin-bottom: 0px; /* Add spacing between image and text */
+    }
+  
+    .content {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .name {
+      font-size: 48px; /* Reduce size for better fit */
+    }
+  
+    .heading {
+      font-size: 60px;
+      line-height: 35px;
+    }
+  
+    .desc {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+  
+    .btn {
+      font-size: 20px;
+      padding: 12px 24px;
+    }
+  }
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
